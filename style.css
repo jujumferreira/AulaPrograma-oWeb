@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8a984;
+}
+
+/* ==========================
+    Header e Navegação
+    ========================== */
+header {
+    background: linear-gradient(135deg, #f35c04cc 0%, #f35c04cc 100%);
+    color: white;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto; 
+    vertical-align: middle;
+}
+
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: opacity 0.3s;
+    font-weight: 500;
+}
+
+nav a:hover,
+nav a.active {
+    opacity: 1;
+    font-weight: bold;
+}
+
+nav a {
+    opacity: 0.8;
+}
+
+.menu-toggle {
+    display: none; 
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Media Query para Menu Mobile */
+@media (max-width: 768px) {
+    nav ul {
+        display: none; /* Esconde por padrão no mobile */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 70px; /* Abaixo do header */
+        left: 0;
+        background: #eaac66;
+        padding: 1rem 0;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    nav ul li {
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+    nav ul li a {
+        display: block;
+        padding: 0.5rem 1rem;
+    }
+    .menu-toggle {
+        display: block;
+    }
+    nav {
+        padding: 0 1rem;
+    }
+    .logo-img {
+        height: 40px; /* Reduz o tamanho da logo em telas menores */
+    }
+}
+
+
+/* Estilo de hover para os blocos Missão/Visão/Valores */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+
+/* ==========================
+    Hero Section - Index (Mantido)
+    ========================== */
+.hero {
+    background: linear-gradient(#f35c04cc, rgba(243, 92, 4, 0.8)),
+                  url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f0f0f0" width="1200" height="600"/></svg>');
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 70px;
+}
+
+.hero-page {
+    background: linear-gradient(135deg, #f88e5e 0%, #f88e5e 100%);
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    color: white;
+    margin-top: 70px;
+}
+
+.hero-content, .signup-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero h1,
+.hero-page h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero p,
+.hero-page p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+
+
+.cta-buttons {
+    display: flex;
+    flex-direction: row; 
+    gap: 1.5rem; 
+    justify-content: center; 
+    align-items: center;
+    flex-wrap: wrap; 
+    margin-top: 2rem;
+}
+
+
+.btn-primary, .btn-secondary {
+    flex: 1 1 200px; 
+    max-width: 250px; 
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px #f35c04cc(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+.btn-primary {
+    background: #f35c04cc;
+    color: white;
+    text-align: center;
+}
+
+
+.btn-secondary {
+    background: #f88e5e;
+    color: white;
+    text-align: center;
+}
+
+
+.btn-primary:hover, .btn-secondary:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+
+.btn-primary::after, .btn-secondary::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255,255,255,0.15);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    text-align: center;
+}
+
+
+.btn-primary:hover::after, .btn-secondary:hover::after {
+    top: -20%;
+    left: -20%;
+    text-align: center;
+}
+
+
+form fieldset {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+
+form legend {
+    font-weight: bold;
+    padding: 0 0.5rem;
+}
+
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+
+.success-message {
+    display: none; 
+    margin-bottom: 1rem;
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}
+
+section.contact {
+    background: #f9f9f9;
+    padding: 2rem;
+    margin-top: 3rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: #f5f5f5;
+    margin-top: 3rem;
+}

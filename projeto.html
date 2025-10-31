@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos de Voluntariado</title>
+    <background-color: #f88e5e;></background-color:>
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap CSS -->
+    <link 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+      crossorigin="anonymous"
+    >
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+<header>
+        <nav>
+            <div class="logo">
+                <img src="imagens/logo kidscipulos (1).png" alt="Logo da Organização Kidscipulos" class="logo-img">
+            </div>
+            
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="navMenu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projeto.html" class="active">Projetos</a></li>
+                <li><a href="cadastro.html">Seja Voluntário</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero text-center">
+        <div class="hero-content">
+            <h1>Venha ser um Voluntário Kidscipulos</h1>
+            <p>Junte-se a nós e faça a diferença na vida de muitas crianças através do voluntariado.</p>
+        </div>
+    </section>
+
+    <!-- Carrosséis Bootstrap -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Galeria de Projetos</h2>
+
+
+        <!-- 4️⃣ Carrossel com efeito fade -->
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="imagens/voluntário 1.jpg" class="d-block w-100" alt="Primeiro Slide">
+            </div>
+            <div class="carousel-item">
+              <img src="imagens/voluntário 2.jpg" class="d-block w-100" alt="Segundo Slide">
+            </div>
+            <div class="carousel-item">
+              <img src="imagens/voluntário 3.jpg" class="d-block w-100" alt="Terceiro Slide">
+            </div>
+            <div class="carousel-item">
+              <img src="imagens/voluntário 4.jpg" class="d-block w-100" alt="Terceiro Slide">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+          </button>
+        </div>
+    </section>
+
+    <!-- Seções restantes -->
+    <section class="about">
+      <div class="section-header">
+        <h2>Como Funciona</h2>
+        <p>Nossos projetos de voluntariado conectam pessoas dispostas a ajudar com famílias e comunidades que precisam de apoio...</p>
+    </section>
+
+        <div class="impact-cards">
+            <div class="card">
+                <div class="card-icon">📚</div>
+                <h3>Educação</h3>
+                <p>Projetos que oferecem suporte escolar, reforço e capacitação para crianças e adultos.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🏥</div>
+                <h3>Saúde</h3>
+                <p>Campanhas de conscientização, atendimento básico e apoio a pessoas em vulnerabilidade.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🎨</div>
+                <h3>Cultura e Inclusão</h3>
+                <p>Atividades culturais e sociais que promovem integração, autoestima e cidadania.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="cta-content">
+            <h2>Participe dos Nossos Projetos</h2>
+            <p>Venha fazer parte do Kidscipulos</p>
+            <div class="cta-buttons">
+                <a href="cadastro.html" class="btn btn-primary">Cadastre-se</a>
+                <a href="index.html" class="btn btn-secondary">Voltar ao Início</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+      <div class="section-header">
+        <h2>Entre em contato com a nossa ONG</h2>
+        <address>
+            <p>Endereço: Praça Cruz Vermelha, 1234 - Bairro Bela Vista - São Paulo/SP</p>
+            <p>Telefone: (55) 11 97654-3218</p>
+            <p>Email: Ferreira_julia@outlook.com</p>
+        </address>
+      </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script 
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+      crossorigin="anonymous">
+    </script>
+</body>
+</html>

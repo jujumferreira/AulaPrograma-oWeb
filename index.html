@@ -4,48 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kidscipulos</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+      rel="stylesheet" 
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+      crossorigin="anonymous"
+    >
 </head>
 <body>
     <header>
-        <h1>usuários</h1>
         <nav>
-            <div> class="logo">&#128153; Usuários</div>
-            <button class="menu-toggle" onclick="toggleMenu()"></button>
+            <div class="logo">
+                <img src="imagens/logo kidscipulos (1).png" alt="Logo da Organização Kidscipulos" class="logo-img">
+            </div>
+            
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
             <ul id="navMenu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projeto.html">projeto</a></li>
-                <li><a href="cadastro.html">cadastro</a></li>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projeto.html" class="active">Projetos</a></li>
+                <li><a href="cadastro.html">Seja Voluntário</a></li>
             </ul>
         </nav>
     </header>
-    <main> 
-        <section>
-            <h2>Quem somos</h2>
+    
+    <main style="padding-top: 90px;"> 
+        
+        <section class="container my-5">
+            <h2 class="text-center mb-4">Quem somos</h2>
             <p>Kidscipulos é uma plataforma dedicada a ensinar crianças sobre os princípios cristãos de maneira divertida e interativa.
-             Nosso objetivo é ajudar os pais e educadores a transmitir valores importantes através de atividades lúdicas, histórias envolventes e recursos educativos.</p>
-             <img src="imagens/imagemescolhida.jpg" alt="foto da ong kidscipulos">
+              Nosso objetivo é ajudar os pais e educadores a transmitir valores importantes através de atividades lúdicas, histórias envolventes e recursos educativos.</p>
+            <div class="text-center">
+                <img src="imagens/logo kidscipulos (1).png" alt="foto da ong kidscipulos" class="img-fluid" style="max-width: 300px; margin-top: 20px;">
+            </div>
         </section>
 
-        <section> 
-            <h2>Valor, Missão e valores</h2>
-            <p>Educação Cristã: Promovemos o ensino dos valores cristãos de forma acessível e envolvente para crianças</p>
-            <p>Inclusão: Acreditamos que todas as crianças, independentemente de sua origem ou circunstâncias, merecem acesso a uma educação de qualidade.</p>
-            <p>Comunidade: Valorizamos a construção de uma comunidade forte e solidária entre pais, educadores e crianças.</p>
+        <section class="container my-5"> 
+            <h2 class="text-center mb-4">Missão, Visão e Valores</h2>
+            
+            <div class="row row-cols-1 row-cols-md-3 g-4 text-center">
+                
+                <div class="col">
+                    <div class="p-4 border rounded-3 h-100 shadow-sm card-hover">
+                        <h3><span class="text-primary">✨</span> Missão</h3>
+                        <p class="mt-3">Promovemos o ensino dos valores cristãos de forma acessível e envolvente para crianças.</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="p-4 border rounded-3 h-100 shadow-sm card-hover">
+                        <h3><span class="text-primary">❤️</span> Visão / Inclusão</h3>
+                        <p class="mt-3">Acreditamos que todas as crianças, independentemente de sua origem ou circunstâncias, merecem acesso a uma educação de qualidade.</p>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="p-4 border rounded-3 h-100 shadow-sm card-hover">
+                        <h3><span class="text-primary">🤝</span> Valores / Comunidade</h3>
+                        <p class="mt-3">Valorizamos a construção de uma comunidade forte e solidária entre pais, educadores e crianças.</p>
+                    </div>
+                </div>
+                
+            </div>
         </section>
 
-        <section>
-            <h2> Entre em contato com a nossa ong</h2>
-            <address>
-                <p>Endreço: praça Cruz vermelha, 1234 - Bairro Bela Vista - São paulo/SP</p>
-                <p>Telefone: (55) 11 97654-3218</p>
-                <p>Email: Ferreira_julia@outlook.com</p>
-            </address>
+        <section class="contact">
+            <div class="container">
+                <h2>Entre em contato com a nossa ONG</h2>
+                <address>
+                    <p>Endereço: praça Cruz vermelha, 1234 - Bairro Bela Vista - São paulo/SP</p>
+                    <p>Telefone: (55) 11 97654-3218</p>
+                    <p>Email: Ferreira_julia@outlook.com</p>
+                </address>
+            </div>
         </section>
     </main>
 
     <footer>
        <p>&copy; 2025 Kidscipulos. Todos os direitos reservados.</p>
     </footer>
+    
+    <script 
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+      crossorigin="anonymous">
+    </script>
+    <script>
+        function toggleMenu() {
+            var navMenu = document.getElementById("navMenu");
+            if (window.getComputedStyle(navMenu).display === "block") {
+                navMenu.style.display = "none";
+            } else {
+                navMenu.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
